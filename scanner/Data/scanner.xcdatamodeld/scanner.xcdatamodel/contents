@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21279" systemVersion="21G83" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="YES" userDefinedModelVersionIdentifier="">
+    <entity name="Scan" representedClassName="Scan" syncable="YES" codeGenerationType="class" coreSpotlightDisplayNameExpression="title">
+        <attribute name="fave" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="isLive" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="lastUpdate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="order" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="timestamp" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="title" optional="YES" attributeType="String" spotlightIndexingEnabled="YES"/>
+        <relationship name="captures" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ScanCapture" inverseName="parent" inverseEntity="ScanCapture"/>
+    </entity>
+    <entity name="ScanCapture" representedClassName="ScanCapture" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="imageData" optional="YES" attributeType="Binary" storedInTruthFile="YES"/>
+        <attribute name="order" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="thumbnailData" optional="YES" attributeType="Binary"/>
+        <attribute name="timestamp" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="parent" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Scan" inverseName="captures" inverseEntity="Scan"/>
+        <relationship name="recognizedItems" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ScanRecognizedItem" inverseName="parent" inverseEntity="ScanRecognizedItem"/>
+    </entity>
+    <entity name="ScanRecognizedItem" representedClassName="ScanRecognizedItem" syncable="YES" codeGenerationType="class" coreSpotlightDisplayNameExpression="transcript">
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="isBarcode" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="order" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="timestamp" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="transcript" optional="YES" attributeType="String" spotlightIndexingEnabled="YES"/>
+        <relationship name="parent" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ScanCapture" inverseName="recognizedItems" inverseEntity="ScanCapture"/>
+    </entity>
+</model>
