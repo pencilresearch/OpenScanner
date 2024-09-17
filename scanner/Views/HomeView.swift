@@ -132,6 +132,7 @@ struct HomeView: View {
 					.listRowSeparator(.hidden)
 					.padding(.top, 40)
 					.padding(.bottom, 100)
+					.buttonStyle(.borderless)
 			}
 			
 		}

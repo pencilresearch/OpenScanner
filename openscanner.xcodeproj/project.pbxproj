@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		A30439A128A317B0002DE651 /* PageScanSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30439A028A317B0002DE651 /* PageScanSummary.swift */; };
-		A30439A528A6063B002DE651 /* LiveCaptureOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30439A428A6063B002DE651 /* LiveCaptureOverlay.swift */; };
 		A30A91D1288A3AB800D8228B /* DataScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30A91D0288A3AB800D8228B /* DataScannerViewController.swift */; };
 		A30A91D5288DB6CA00D8228B /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30A91D4288DB6CA00D8228B /* AppState.swift */; };
 		A30E5C8E288A2FF40099985F /* scannerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30E5C8D288A2FF40099985F /* scannerApp.swift */; };
@@ -98,7 +97,6 @@
 
 /* Begin PBXFileReference section */
 		A30439A028A317B0002DE651 /* PageScanSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageScanSummary.swift; sourceTree = "<group>"; };
-		A30439A428A6063B002DE651 /* LiveCaptureOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveCaptureOverlay.swift; sourceTree = "<group>"; };
 		A30A91D0288A3AB800D8228B /* DataScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataScannerViewController.swift; sourceTree = "<group>"; };
 		A30A91D4288DB6CA00D8228B /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		A30E5C8A288A2FF40099985F /* scanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = scanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -207,29 +205,20 @@
 		A30E5C8C288A2FF40099985F /* scanner */ = {
 			isa = PBXGroup;
 			children = (
-				A30FC74B28949B9500C75CFB /* AboutView.swift */,
+				A30E5C8D288A2FF40099985F /* scannerApp.swift */,
+				A30E5C94288A2FF40099985F /* ContentView.swift */,
 				A3B9F72F28AF007300EEDDFF /* AppIntents.swift */,
 				A30A91D4288DB6CA00D8228B /* AppState.swift */,
-				A30E5C96288A2FF50099985F /* Assets.xcassets */,
-				A30FC7462894799300C75CFB /* Buttons */,
-				A30E5C94288A2FF40099985F /* ContentView.swift */,
-				A30FC7392891ACE100C75CFB /* Data */,
-				A3DE6DD8289C303D00A7E740 /* HomeView.swift */,
-				A325C2CC288DCAEF00E83CF6 /* Info.plist */,
-				A3B9F72D28A6F97C00EEDDFF /* StringMetrics.swift */,
-				A30439A428A6063B002DE651 /* LiveCaptureOverlay.swift */,
-				A30FC73E289248C300C75CFB /* LiveCaptureSummary.swift */,
-				A30FC73A2892033000C75CFB /* LiveScanSummary.swift */,
 				A3B9F73128AF021000EEDDFF /* NavigationManager.swift */,
-				A325C2CF288F0F0200E83CF6 /* PageScan.swift */,
-				A30439A028A317B0002DE651 /* PageScanSummary.swift */,
-				A30E5C99288A2FF50099985F /* Preview Content */,
-				A3134DA928B57477001A3EF3 /* RecognizedItemView.swift */,
+				A30E5C96288A2FF50099985F /* Assets.xcassets */,
+				A325C2CC288DCAEF00E83CF6 /* Info.plist */,
 				A30E5C98288A2FF50099985F /* scanner.entitlements */,
-				A30E5C8D288A2FF40099985F /* scannerApp.swift */,
-				A3DE6DDA289C365400A7E740 /* ScanStartPicker.swift */,
+				A3B56FD92C99F2CF00EF29FE /* Views */,
+				A30FC7462894799300C75CFB /* Buttons */,
+				A30FC7392891ACE100C75CFB /* Data */,
+				A3B56FDA2C99F2F600EF29FE /* Extensions */,
 				A30FC7382891ACA800C75CFB /* UIKit */,
-				A325C2D1288F75C800E83CF6 /* ViewExtensions.swift */,
+				A30E5C99288A2FF50099985F /* Preview Content */,
 			);
 			path = scanner;
 			sourceTree = "<group>";
@@ -304,6 +293,30 @@
 				A3233D3A28BC49B70088268F /* Info.plist */,
 			);
 			path = ScannerWidget;
+			sourceTree = "<group>";
+		};
+		A3B56FD92C99F2CF00EF29FE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A30FC74B28949B9500C75CFB /* AboutView.swift */,
+				A3DE6DD8289C303D00A7E740 /* HomeView.swift */,
+				A30FC73E289248C300C75CFB /* LiveCaptureSummary.swift */,
+				A30FC73A2892033000C75CFB /* LiveScanSummary.swift */,
+				A325C2CF288F0F0200E83CF6 /* PageScan.swift */,
+				A30439A028A317B0002DE651 /* PageScanSummary.swift */,
+				A3134DA928B57477001A3EF3 /* RecognizedItemView.swift */,
+				A3DE6DDA289C365400A7E740 /* ScanStartPicker.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A3B56FDA2C99F2F600EF29FE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A3B9F72D28A6F97C00EEDDFF /* StringMetrics.swift */,
+				A325C2D1288F75C800E83CF6 /* ViewExtensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		A3DE6DEF289C7E6300A7E740 /* Frameworks */ = {
@@ -486,7 +499,6 @@
 				A30FC7522895A22700C75CFB /* QuickLookController.swift in Sources */,
 				A3134DAA28B57477001A3EF3 /* RecognizedItemView.swift in Sources */,
 				A30FC74C28949B9500C75CFB /* AboutView.swift in Sources */,
-				A30439A528A6063B002DE651 /* LiveCaptureOverlay.swift in Sources */,
 				A3B9F73028AF007300EEDDFF /* AppIntents.swift in Sources */,
 				A30FC73F289248C300C75CFB /* LiveCaptureSummary.swift in Sources */,
 				A30A91D5288DB6CA00D8228B /* AppState.swift in Sources */,
