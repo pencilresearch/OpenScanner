@@ -40,3 +40,5 @@ This project's purpose is to provide iPhone users with a free (and ad-free), pri
 Open Scanner is written in Swift and built with SwiftUI. It uses Core Data for data storage, and CloudKit for synchronization. It supports iOS 16.0+ and visionOS 1.2+.
 
 Contributions to the project, either as issues or pull requests, are welcome.
+
+The version numbers in [Releases](https://github.com/pencilresearch/OpenScanner/releases) correspond to the version numbers in Open Scanner's App Store listing.
