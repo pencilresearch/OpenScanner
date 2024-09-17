@@ -236,7 +236,7 @@ extension ScanCapture {
 	}
 	
 	public func createImage(fullSizedImage: UIImage) {
-		let newWidth = 1200.0
+		let newWidth = 2400.0
 		imageData = fullSizedImage.resizeToWidth(newWidth).jpegData(compressionQuality: 0.75)
 	}
 	

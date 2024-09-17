@@ -50,14 +50,17 @@ struct AboutView: View {
 				HStack {
 					VStack(alignment: .leading, spacing: 30) {
 						
-						Button(action: {
-							UIApplication.shared.open(URL(string: "mailto:support@openscanner.app?subject=Open%20Scanner%20support%20request&body=\(AboutView.supportBody)")!,
-													  options: [:],
-													  completionHandler: nil)
-						}) {
-							HStack {
-								Image(systemName: "ellipsis.bubble")
+						
+						HStack {
+							Image(systemName: "ellipsis.bubble")
+							
+							Button {
+								UIApplication.shared.open(URL(string: "mailto:support@openscanner.app?subject=Open%20Scanner%20support%20request&body=\(AboutView.supportBody)")!,
+														  options: [:],
+														  completionHandler: nil)
+							} label: {
 								Text("Need help?")
+									.contentShape(Rectangle())
 							}
 						}
 						
